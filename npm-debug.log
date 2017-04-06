@@ -1,0 +1,119 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\predrag.radic\\Source\\Repos\\node-data-structures',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\predrag.radic\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle data-structures@0.0.1~prepublish: data-structures@0.0.1
+11 silly lifecycle data-structures@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\predrag.radic\\AppData\\Roaming\\npm-cache\\data-structures\\0.0.1\\package.tgz',
+12 verbose tar pack   'C:\\Users\\predrag.radic\\Source\\Repos\\node-data-structures' ]
+13 verbose tarball C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package.tgz
+14 verbose folder C:\Users\predrag.radic\Source\Repos\node-data-structures
+15 verbose addLocalTarball adding from inside cache C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package.tgz
+16 verbose correctMkdir C:\Users\predrag.radic\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd data-structures@0.0.1
+18 verbose afterAdd C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\predrag.radic\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package\package.json written
+21 silly publish { name: 'data-structures',
+21 silly publish   version: '0.0.1',
+21 silly publish   description: 'Most complete collection of data structures classes and methods, including linked list, BST, heap, ...',
+21 silly publish   main: 'index.js',
+21 silly publish   directories: { test: 'test' },
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/Radiconi/node-data-structures.git' },
+21 silly publish   keywords:
+21 silly publish    [ 'data structures',
+21 silly publish      'linked list',
+21 silly publish      'binary tree',
+21 silly publish      'bst',
+21 silly publish      'heap',
+21 silly publish      'priority',
+21 silly publish      'queue',
+21 silly publish      'stack',
+21 silly publish      'queue' ],
+21 silly publish   author: { name: '“Predrag', email: '“predrag.radic@yahoo.com”' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/Radiconi/node-data-structures/issues' },
+21 silly publish   homepage: 'https://github.com/Radiconi/node-data-structures#readme',
+21 silly publish   devDependencies: { chai: '^3.5.0', mocha: '^3.2.0' },
+21 silly publish   gitHead: '5ad889786e61f0f37ea17619f58639b1d4859512',
+21 silly publish   readme: 'ERROR: No README data found!',
+21 silly publish   _id: 'data-structures@0.0.1',
+21 silly publish   _shasum: '7f963bd6b20d2ee099af31f068d344b900fb5e10',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name data-structures
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'data-structures',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'data-structures',
+26 silly mapToRegistry   name: 'data-structures',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/data-structures
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\predrag.radic\AppData\Roaming\npm-cache\data-structures\0.0.1\package.tgz
+30 verbose request uri https://registry.npmjs.org/data-structures
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 10:28:55
+33 verbose request using bearer token for auth
+34 verbose request id 2b6d29ba37b05ee8
+35 http request PUT https://registry.npmjs.org/data-structures
+36 http 403 https://registry.npmjs.org/data-structures
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '109',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 06 Apr 2017 08:26:48 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-hhn1541-HHN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1491467208.225713,VS0,VE648',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating C:\Users\predrag.radic\AppData\Roaming\npm-cache\registry.npmjs.org\data-structures on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you do not have permission to publish "data-structures". Are you logged in as the correct user? : data-structures
+40 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid data-structures
+43 verbose cwd C:\Users\predrag.radic\Source\Repos\node-data-structures
+44 error Windows_NT 6.3.9600
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.10.0
+47 error npm  v3.10.10
+48 error code E403
+49 error you do not have permission to publish "data-structures". Are you logged in as the correct user? : data-structures
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
