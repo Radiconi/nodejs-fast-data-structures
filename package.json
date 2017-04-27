@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Radiconi/node-data-structures.git"
+        "url": "git+https://github.com/Radiconi/nodejs-fast-data-structures.git"
     },
     "keywords": [
         "data structures",
@@ -21,15 +21,14 @@
         "heap",
         "priority",
         "queue",
-        "stack",
-        "queue"
+        "stack"
     ],
     "author": "“Predrag <“predrag.radic@yahoo.com”>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Radiconi/node-data-structures/issues"
+        "url": "https://github.com/Radiconi/nodejs-fast-data-structures/issues"
     },
-    "homepage": "https://github.com/Radiconi/node-data-structures#readme",
+    "homepage": "https://github.com/Radiconi/nodejs-fast-data-structures#readme",
     "devDependencies": {
         "chai": "^3.5.0",
         "mocha": "^3.2.0"
