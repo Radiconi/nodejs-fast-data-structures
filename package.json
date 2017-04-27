@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Radiconi/nodejs-fast-data-structures.git"
+        "url": "https://github.com/Radiconi/nodejs-fast-data-structures.git"
     },
     "keywords": [
         "data structures",
