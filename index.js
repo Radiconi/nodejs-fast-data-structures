@@ -6,7 +6,7 @@
 
 'use strict'
 
-var bst = require('./lib/bst');
-var linkedList = require('./lib/linked-list');
+var Bst = require('./lib/bst');
+var LinkedList = require('./lib/linked-list');
 
-module.exports = { LinkedList: linkedList, BinarySearchTree: bst };
+module.exports = { LinkedList: LinkedList, BinarySearchTree: Bst };
