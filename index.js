@@ -9,4 +9,4 @@
 var Bst = require('./lib/bst');
 var LinkedList = require('./lib/linked-list');
 
-module.exports = { LinkedList: LinkedList, BinarySearchTree: Bst };
+module.exports = { LinkedList: LinkedList, Bst: Bst };
