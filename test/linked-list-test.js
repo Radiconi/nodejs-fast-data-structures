@@ -245,4 +245,26 @@ describe('Linked list', () => {
 
     });
 
+    describe('Filter, map reduce', () => {
+        const list = new LinkedList([1, 2, 3, 4, 5, 6]);
+
+        it('should filter by callback', () => {
+            assert.deepEqual([2, 4, 6], list.filter((val) => val % 2 === 0).toArray());
+        });
+
+        it('should map by callback', () => {
+            assert.deepEqual([2, 3, 4, 5, 6, 7], list.map((val) => {
+                return val + 1;
+            }).toArray());
+        });
+
+        it('should reduce by callback', () => {
+            assert.strictEqual(22,
+                list.reduce((aggr, next) => {
+                    return aggr + next;
+                }, 1));
+        });
+
+    });
+
 });

@@ -8,10 +8,8 @@ JavaScript arrays and objects are generally powerful structures. Arrays can be u
     npm install fast-data-structures
 
 ```js
-
     const LinkedList = require('fast-data-structures').LinkedList;
     const Bst = require('fast-data-structures').Bst;
-
 ```
 
 ## Linked List
@@ -31,35 +29,31 @@ Or create new list from an array:
     const list = new LinkedList([1, 2, 3, 4, 5]);
 ```
 
-List contains Node objects, which have next properties:
-- value
-- next
-- prev
+List contains doubly-linked Node objects, which have next properties:
+    value
+    next
+    prev
 
-### LinkedList Properties & Methods
-    count
-    first
-    last
-
-    getNewNode(val)
-    
-    addAfter(node, val)
-    addBefore(node, val)
-    addFirst(val)
-    addLast(val)
-
-    removeNode(node) 
-    removeFirst()
-    removeLast()
-    
-    findByPosition(pos)
-    findByValue(val, getLast)
-
-    iterate(callback)
-    toArray() {
-    clear()
-    equals(list, comparator)
-
-    filter(callback)
-    map(callback)
-    reduce(callback, init)
+#### LinkedList Properties & Methods:
+    | Property / Method         | Time complexity |
+    | ------------------------- | ---- |
+    | count                     | O(1) |
+    | first                     | O(1) |
+    | last                      | O(1) |
+    | getNewNode(val)           | O(1) |
+    | addAfter(node, val)       | O(1) |
+    | addBefore(node, val)      | O(1) |
+    | addFirst(val)             | O(1) |
+    | addLast(val)              | O(1) |
+    | removeNode(node)          | O(1) |
+    | removeFirst()             | O(1) |
+    | removeLast()              | O(1) |
+    | findByPosition(pos)       | O(N) |
+    | findByValue(val, getLast) | O(N) |
+    | iterate(callback)         | O(N) |
+    | toArray()                 | O(N) |
+    | clear()                   | O(1) |
+    | equals(list, comparator)  | O(N) |
+    | filter(callback)          | O(N) |
+    | map(callback)             | O(N) |
+    | reduce(callback, init)    | O(2N) |
