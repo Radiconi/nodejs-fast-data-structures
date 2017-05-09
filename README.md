@@ -35,25 +35,24 @@ List contains doubly-linked Node objects, which have next properties:
     prev
 
 #### LinkedList Properties & Methods:
-    | Property / Method         | Time complexity |
-    | ------------------------- | ---- |
-    | count                     | O(1) |
-    | first                     | O(1) |
-    | last                      | O(1) |
-    | getNewNode(val)           | O(1) |
-    | addAfter(node, val)       | O(1) |
-    | addBefore(node, val)      | O(1) |
-    | addFirst(val)             | O(1) |
-    | addLast(val)              | O(1) |
-    | removeNode(node)          | O(1) |
-    | removeFirst()             | O(1) |
-    | removeLast()              | O(1) |
-    | findByPosition(pos)       | O(N) |
-    | findByValue(val, getLast) | O(N) |
-    | iterate(callback)         | O(N) |
-    | toArray()                 | O(N) |
-    | clear()                   | O(1) |
-    | equals(list, comparator)  | O(N) |
-    | filter(callback)          | O(N) |
-    | map(callback)             | O(N) |
-    | reduce(callback, init)    | O(2N) |
+    Property or Method        | Time complexity
+    ------------------------- | ----
+    count                     | O(1)
+    first                     | O(1)
+    last                      | O(1)
+    getNewNode(val)           | O(1)
+    addAfter(node, val)       | O(1)
+    addBefore(node, val)      | O(1)
+    addFirst(val)             | O(1)
+    addLast(val)              | O(1)
+    removeNode(node)          | O(1)
+    removeFirst()             | O(1)
+    removeLast()              | O(1)
+    findByValue(val, getLast) | O(N)
+    iterate(callback)         | O(N)
+    toArray()                 | O(N)
+    clear()                   | O(1)
+    equals(list, comparator)  | O(N)
+    filter(callback)          | O(N)
+    map(callback)             | O(N)
+    reduce(callback, init)    | O(2N)
