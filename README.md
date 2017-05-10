@@ -1,10 +1,10 @@
 Fast data structures
 ====================
-Node module with most complete implementation of common data structures: Linked List and Binary Search Tree. (Heap tree in rogress...)
+Node.js module with most complete implementation of common data structures: Linked List and Binary Search Tree. (Heap in progress...)
 
 Motivation
 ----------
-JavaScript arrays and objects are generally powerful structures. Arrays can be used to easily emulate Stack or Queue, where stack basic methods (push and pop) are natively present. Object in JavaScript is basicly a collection of key-value pairs, where each key (i.e property nme) is unique. So this structure is natural hash table. Although for client-side programming this is quite enough, on server-side, much more complex cases can be found, and it’s important to have most efficient algorithm. Two basic more advanced data structures are Linked Lists and Binary Search Trees. Implementations with arrays can potentially be very inefficient, raising problems in case of application scaling, and high workload. And yes, there are a lot of implementations of these data structures out there, but I wanted to create one feature-rich implementation, with all methods that can be found in .NET or Java, and even more.
+JavaScript arrays and objects are generally powerful structures. Arrays are used as collections of anything, and can easily emulate Stack or Queue, where stack basic methods (push and pop) are natively present. Object in JavaScript is basically a collection of key-value pairs, where each key (i.e. property name) is unique. So this structure is natural hash table. Although for client-side programming this is quite enough, on server-side we can deal with large data and much more complex cases can be found. It’s always important to implement most efficient algorithm, according to requirements. Two basic more advanced data structures are Linked Lists and Binary Search Trees.And yes, there are a lot of implementations of these data structures out there, but I wanted to create one feature-rich implementation, wieh e.
 
 Usage
 -----
@@ -18,9 +18,10 @@ Usage
 Linked List
 -----------
 Linked lists are preferable over arrays if you:
+- have unpredictable number of elements which change over time
 - need to insert-delete elements at the beginning or middle of the list
-- perform large number of insert / delete operations (in constant time, with reference to an element)
-- don't need random access to elements
+- perform large number of insert / delete operations
+- don't need random access to elements, but access is referenced to beginning, end or one or more elements inside list
 - want to implement fast queue
 
 Create new empty list object
@@ -28,7 +29,7 @@ Create new empty list object
     const list = new LinkedList();
 ```
 
-Or create new list from an array:
+...or create new list from an array:
 ```js
     const list = new LinkedList([1, 2, 3, 4, 5]);
 ```
@@ -36,8 +37,8 @@ Or create new list from an array:
 List contains doubly-linked Node objects, which have next properties:
 
     value
-    next - reference to next Node
-    prev - reference to previous Node
+    next - reference to next node
+    prev - reference to previous node
 
 ### LinkedList Properties & Methods:
 
@@ -65,9 +66,9 @@ reduce(callback, init)    | O(N)
 
 Binary Search Tree
 ------------------
-Binary search tree represents an important data structucture when it comes to more complex work with sorted data, and fast search for specific elements in a collection. Fast and easy alternative to BST are Hash Sets ('Set' objects in ES6) or Hash Tables, which in JavaScript can be represented by Object or Map (ES6). Hash structures provide fast (O(1)) access to an element by its key. But any kind of additional logic over element keys (e.g get minimum or maximum) leads to O(N) complexity. Also sorted array can be used instead of BST, but in case of frequent add/remove, preserving array to be sorted can be expensive.
-Therefore __Balanced__ BST is competetive data structure if you want to:
-- Work with an dynamic sorted collection
+Binary search tree represents an important data structure when it comes to more complex work with sorted data, and fast search for specific elements in a collection. Fast and easy alternative to BST are Hash Sets ('Set' objects in ES6) or Hash Tables, which in JavaScript can be represented by Object or Map (ES6). Hash structures provide fast (O(1)) access to an element by its key. But any kind of additional logic over element keys (e.g. get minimum or maximum) leads to O(N) complexity. Also sorted array can be used instead of BST, but in case of frequent add/remove, preserving array to be sorted can be expensive.
+Therefore **Balanced** BST is competitive data structure if you want to:
+- Work with a dynamic sorted collection
 - Perform sorted traversal
 - Count number of elements less or greater than a value, or inside range
 - Traverse elements less or greater than a value, or inside range
@@ -79,22 +80,22 @@ This BST is realized implementing **Red-Black algorithm** to maintain tree balan
 ### Object creation
 You can create new BST object in several different ways:
 
-- Create new empty tree object
+1. Create new empty tree object
 ```js
     const tree = new Bst();
 ```
 
-- From simple array; key and value will be the same here:
+2. From simple array; key and value will be the same here:
 ```js
     const tree = new Bst([1, 2, 3, 4, 5]);
 ```
 
-- From array of objects with key/value properties:
+3. From array of objects with key/value properties:
 ```js
     const tree = new Bst([{ key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3} ]);
 ```
 
-- From aray of objects with specified key predicate; whole object will be node value:
+4. From aray of objects with specified key predicate; whole object will be node value:
 ```js
     let bstConstruct = {
         data: [
@@ -106,15 +107,27 @@ You can create new BST object in several different ways:
     const tree = new Bst(bstConstruct);
 ```
 
-Bst can also b constructed with compareFunc attribute provided, which will be used as comparator function. This function should take two objects as arguments (a, b) and returns: -1 when a < b, 0 when a === b and 1 when a > b. It's used in case of complex keys which cannot be compared using built-in operators (<, ===, >). For performance reason, always consider generating keyswhich can be compared using regular {operators. 
+Additionally BST can be constructed with compareFunc attribute provided, which will be used as comparator function. This function should take two objects as arguments (a, b) and returns: -1 when a < b, 0 when a === b and 1 when a > b. It's used in case of complex keys which cannot be compared using built-in operators (<, ===, >). For performance reason, always consider generating keys which can be compared using regular operators. 
 ```js
     const tree = new Bst([], (el1, el2) => {
-        return el1.key.last > el2.key.last ? 1 : (el1.key.last < el2.key.last ? - 1 : el1.key.first > el2.key.first ? 1 : (el1.key.first < el2.key.first ? -1 : 0);
+        if (el1.key.last > el2.key.last) {
+            return 1;
+        } else if (el1.key.last < el2.key.last) {
+            return -1;
+        } else {
+            if (el1.key.first > el2.key.first) {
+                return 1;
+            } else if (el1.key.first < el2.key.first) {
+                return -1
+            } else {
+                return 0;
+            }
+        }
     });
 ```
 
 ### BST Node objects
-Bst contains Node objects, which have next properties:
+BST contains Node objects, which have next properties:
 
     key
     value
