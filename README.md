@@ -3,7 +3,7 @@ Fast data structures
 Node module with most complete implementation of common data structures: Linked List and Binary Search Tree. (Heap tree in rogress...)
 
 Motivation
-{----------
+----------
 JavaScript arrays and objects are generally powerful structures. Arrays can be used to easily emulate Stack or Queue, where stack basic methods (push and pop) are natively present. Object in JavaScript is basicly a collection of key-value pairs, where each key (i.e property nme) is unique. So this structure is natural hash table. Although for client-side programming this is quite enough, on server-side, much more complex cases can be found, and it’s important to have most efficient algorithm. Two basic more advanced data structures are Linked Lists and Binary Search Trees. Implementations with arrays can potentially be very inefficient, raising problems in case of application scaling, and high workload. And yes, there are a lot of implementations of these data structures out there, but I wanted to create one feature-rich implementation, with all methods that can be found in .NET or Java, and even more.
 
 Usage
