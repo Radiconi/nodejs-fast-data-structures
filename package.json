@@ -1,36 +1,36 @@
 {
-    "name": "fast-data-structures",
-    "version": "0.0.2",
-    "description": "Most complete collection of data structures classes and methods, including linked list, BST, heap, ...",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "scripts": {
-        "test": "mocha"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Radiconi/nodejs-fast-data-structures.git"
-    },
-    "keywords": [
-        "data structures",
-        "linked list",
-        "binary tree",
-        "bst",
-        "heap",
-        "priority",
-        "queue",
-        "stack"
-    ],
-    "author": "“Predrag <“predrag.radic@yahoo.com”>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Radiconi/nodejs-fast-data-structures/issues"
-    },
-    "homepage": "https://github.com/Radiconi/nodejs-fast-data-structures#readme",
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "mocha": "^3.2.0"
-    }
+  "name": "fast-data-structures",
+  "version": "0.0.3",
+  "description": "Most complete collection of data structures classes and methods, including linked list, BST, heap, ...",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Radiconi/nodejs-fast-data-structures.git"
+  },
+  "keywords": [
+    "data structures",
+    "linked list",
+    "binary tree",
+    "bst",
+    "heap",
+    "priority",
+    "queue",
+    "stack"
+  ],
+  "author": "“Predrag <“predrag.radic@yahoo.com”>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Radiconi/nodejs-fast-data-structures/issues"
+  },
+  "homepage": "https://github.com/Radiconi/nodejs-fast-data-structures#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
 }
