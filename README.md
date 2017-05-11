@@ -4,7 +4,8 @@ Node.js module with most complete implementation of common data structures: Link
 
 Motivation
 ----------
-JavaScript arrays and objects are generally powerful structures. Arrays are used as collections of anything, and can easily emulate Stack or Queue, where stack basic methods (push and pop) are natively present. Object in JavaScript is basically a collection of key-value pairs, where each key (i.e. property name) is unique. So this structure is natural hash table. Although for client-side programming this is quite enough, on server-side we can deal with large data and much more complex cases can be found. It’s always important to implement most efficient algorithm, according to requirements. Two basic more advanced data structures are Linked Lists and Binary Search Trees.And yes, there are a lot of implementations of these data structures out there, but I wanted to create one feature-rich implementation, wieh e.
+JavaScript arrays and objects are generally powerful structures. Arrays are used as collections of anything, and can easily emulate Stack or Queue. Object in JavaScript is basically a collection of key-value pairs, where each key (i.e. property name) is unique. So this structure is natural hash table. Although for client-side programming this is quite enough, on server-side we can deal with large amount of data and much more complex cases can be found. It’s always important to implement most efficient algorithm, according to requirements, and design application to be ready to scale without performance loss. Two basic more advanced data structures are Linked Lists and Binary Search Trees. 
+There are a lot of implementations of these data structures out there, but I wanted to create one feature-rich implementation, with emphasis on features where these structures provide better performance than arrays or hash tables.
 
 Usage
 -----
@@ -21,7 +22,7 @@ Linked lists are preferable over arrays if you:
 - have unpredictable number of elements which change over time
 - need to insert-delete elements at the beginning or middle of the list
 - perform large number of insert / delete operations
-- don't need random access to elements, but access is referenced to beginning, end or one or more elements inside list
+- don't need random access to elements, but access is referenced to the beginning, end or one or more elements inside list
 - want to implement fast queue
 
 Create new empty list object
@@ -75,7 +76,7 @@ Therefore **Balanced** BST is competitive data structure if you want to:
 - Find next closest element
 - Find minimum or maximum
 
-This BST is realized implementing **Red-Black algorithm** to maintain tree balance for optimum time complexity.
+This BST is realized implementing **Red-Black algorithm** to maintain tree balance for optimal access time.
 
 ### Object creation
 You can create new BST object in several different ways:
