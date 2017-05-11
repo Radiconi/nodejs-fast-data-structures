@@ -1,6 +1,6 @@
 {
   "name": "fast-data-structures",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Most complete collection of data structures classes and methods, including linked list, BST, heap, ...",
   "main": "index.js",
   "directories": {
