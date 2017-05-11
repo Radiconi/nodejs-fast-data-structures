@@ -95,7 +95,7 @@ compareAlgorithms(testCase1, testCase2);
  * Remove element in middle of the list
  * Add new element at its position
  */
-/*
+
 var testCase1 = {
 
     name: 'Linked list',
@@ -140,5 +140,3 @@ var testCase2 = {
 }
 
 compareAlgorithms(testCase1, testCase2);
-
-*/
